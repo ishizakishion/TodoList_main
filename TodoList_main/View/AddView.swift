@@ -19,7 +19,7 @@ struct AddView: View {
     var body: some View {
         ScrollView{
             VStack{
-                TextField("typr of some here..", text: $textfield)
+                TextField("リスト名", text: $textfield)
                     .padding(.horizontal)
                     .frame(height: 55)
                     .background(Color.gray)
@@ -28,7 +28,7 @@ struct AddView: View {
                 Button{
                     saveButtonPressed()
                 }label: {
-                    Text("Save".uppercased())
+                    Text("追加".uppercased())
                         .foregroundColor(.white)
                         .font(.headline)
                         .frame(height: 55)
@@ -42,7 +42,7 @@ struct AddView: View {
             .padding(16)
             
         }
-        .navigationTitle("やることを追加")
+        .navigationTitle("リストを追加する")
         .alert(isPresented: $showAlert, content:getAlert)
     }
     
